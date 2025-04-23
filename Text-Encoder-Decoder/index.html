@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Encoder & Decoder</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Text Encoder & Decoder</h1>
+    <textarea id="inputText" placeholder="Enter your text here..." oninput="autoDetectEncoding()"></textarea>
+
+    <label for="encodingType">Choose encoding type:</label>
+    <select id="encodingType">
+      <option value="hex">Hexadecimal</option>
+      <option value="binary">Binary</option>
+      <option value="octal">Octal</option>
+      <option value="ascii">Decimal (ASCII)</option>
+      <option value="base64">Base64</option>
+      <option value="morse">Morse Code</option>
+      <option value="nato">NATO Phonetic</option>
+      <option value="leet">Leetspeak</option>
+      <option value="rot13">ROT13</option>
+      <option value="url">URL Encoding</option>
+      <option value="html">HTML Entities</option>
+      <option value="piglatin">Pig Latin</option>
+      <option value="upside">Upside Down</option>
+    </select>
+
+    <div class="buttons">
+      <button onclick="handleEncode()">Encode</button>
+      <button onclick="handleDecode()">Decode</button>
+      <button onclick="clearText()">Clear</button>
+      <button onclick="copyOutput()">Copy</button>
+      <button onclick="downloadOutput()">Download</button>
+      <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </div>
+
+    <textarea id="outputText" placeholder="Output will appear here..." readonly></textarea>
+    <button onclick="shareLink()">Share Encoded Link</button>
+  </div>
+
+  <script src="js/encoders.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
